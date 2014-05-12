@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.SocketTimeoutException;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpRequest;
@@ -64,11 +62,11 @@ public final class AsyncHttpManager {
 	
 	private static ConcurrentHashMap<String, AsyncHttpSenderTask> tasks = new ConcurrentHashMap<String, AsyncHttpSenderTask>();
 	
-	private static ExecutorService httpTaskPool = Executors.newFixedThreadPool(5);
+	/*private static ExecutorService httpTaskPool = Executors.newFixedThreadPool(5);
 	private static ConcurrentHashMap<String, Runnable> runnables = new ConcurrentHashMap<String, Runnable>();
 	
 	private static AsyncHttpSenderTask asyncHttpSenderTask = new AsyncHttpSenderTask(null);
-	private static ConcurrentHashMap<String, Boolean> taskMaps = new ConcurrentHashMap<String, Boolean>();
+	private static ConcurrentHashMap<String, Boolean> taskMaps = new ConcurrentHashMap<String, Boolean>();*/
 	
 	
 	private AsyncHttpManager() {
